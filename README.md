@@ -1,4 +1,4 @@
-# TECHICAL PAPER - OBJECTS
+# TECHNICAL PAPER - OBJECTS
 
 ## Introduction to Objects
 
