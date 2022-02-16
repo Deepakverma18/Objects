@@ -131,6 +131,68 @@ Object methods are invoked by appending the object’s name with the dot operato
 alienShip.invade(); // Prints 'Hello! We have come to dominate your planet. Instead of Earth, it shall be called New Xaculon.'
 ```
 
+## Nested Objects
+
+```
+const spaceship = {
+     telescope: {
+        yearBuilt: 2018,
+        model: '91031-XLT',
+        focalLength: 2032 
+     },
+    crew: {
+        captain: { 
+            name: 'Sandra', 
+            degree: 'Computer Engineering', 
+            encourageTeam() { console.log('We got this!') } 
+         }
+    },
+    engine: {
+        model: 'Nimbus2000'
+     },
+     nanoelectronics: {
+         computer: {
+            terabytes: 100,
+            monitors: 'HD'
+         },
+        'back-up': {
+           battery: 'Lithium',
+           terabytes: 50
+         }
+    }
+};
+```
+```
+spaceship.nanoelectronics['back-up'].battery; // Returns 'Lithium'
+```
+
+## Pass By Reference
+
+Objects are passed by reference. This means when we pass a variable assigned to an object into a function as an argument, the computer interprets the parameter name as pointing to the space in memory holding that object. As a result, functions which change object properties actually mutate the object permanently (even when the object is assigned to a const variable).
+
+```
+const spaceship = {
+  homePlanet : 'Earth',
+  color : 'silver'
+};
+ 
+let paintIt = obj => {
+  obj.color = 'glorious gold'
+};
+ 
+paintIt(spaceship);
+ 
+spaceship.color // Returns 'glorious gold'
+```
+
+Our function paintIt() permanently changed the color of our spaceship object. However, reassignment of the spaceship variable wouldn’t work in the same way:
+```
+
+
+
+
+
+
 
 
 
