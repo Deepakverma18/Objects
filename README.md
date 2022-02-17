@@ -187,3 +187,6 @@ spaceship.color // Returns 'glorious gold'
 
 Our function paintIt() permanently changed the color of our spaceship object. However, reassignment of the spaceship variable wouldn’t work in the same way:
 
+## Reference 
+
+[Javascript objects](https://www.codecademy.com/courses/introduction-to-javascript/lessons/advanced-objects/exercises/adv-this)
